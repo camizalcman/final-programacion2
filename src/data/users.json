@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Admin Principal",
+    "password": "admin123",
+    "email": "admin@viajes.com",
+    "isSubscribed": true,
+    "isAdmin": true,
+    "registerDate": "2024-01-10",
+    "likedPostIDs": [1, 5]
+  },
+  {
+    "name": "Camila Zalazar",
+    "password": "camila2025",
+    "email": "camila@mail.com",
+    "isSubscribed": true,
+    "isAdmin": false,
+    "registerDate": "2024-06-15",
+    "likedPostIDs": [3, 7]
+  },
+  {
+    "name": "Juan Pérez",
+    "password": "juan1234",
+    "email": "juan@mail.com",
+    "isSubscribed": false,
+    "isAdmin": false,
+    "registerDate": "2024-08-22",
+    "likedPostIDs": []
+  },
+  {
+    "name": "Sofía Gómez",
+    "password": "sofia456",
+    "email": "sofia@mail.com",
+    "isSubscribed": true,
+    "isAdmin": false,
+    "registerDate": "2025-02-01",
+    "likedPostIDs": [2, 4, 6]
+  },
+  {
+    "name": "Mateo Fernández",
+    "password": "mateo789",
+    "email": "mateo@mail.com",
+    "isSubscribed": false,
+    "isAdmin": false,
+    "registerDate": "2025-03-10",
+    "likedPostIDs": [8]
+  }
+]

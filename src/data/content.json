@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "name": "Kioto",
+    "country": "Japón",
+    "continent": "Asia",
+    "description": "Antigua capital imperial de Japón, famosa por sus templos budistas, jardines tradicionales y el histórico distrito de Gion.",
+    "coverImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e",
+    "images": [
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e",
+      "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36"
+    ],
+    "rating": 4.8,
+    "climate": "Templado",
+    "bestSeasonToVisit": "Primavera",
+    "tags": ["cultura", "templos", "naturaleza"],
+    "createdAt": "2025-01-15",
+    "location": { "lat": 35.0116, "lng": 135.7681 }
+  },
+  {
+    "id": 2,
+    "name": "Roma",
+    "country": "Italia",
+    "continent": "Europa",
+    "description": "Capital de Italia y cuna del Imperio Romano, con ruinas milenarias, arte renacentista y una gastronomía inigualable.",
+    "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "images": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+      "https://images.unsplash.com/photo-1531572753322-ad063cecc140"
+    ],
+    "rating": 4.7,
+    "climate": "Mediterráneo",
+    "bestSeasonToVisit": "Otoño",
+    "tags": ["historia", "gastronomía", "arte"],
+    "createdAt": "2025-01-20",
+    "location": { "lat": 41.9028, "lng": 12.4964 }
+  },
+  {
+    "id": 3,
+    "name": "Bariloche",
+    "country": "Argentina",
+    "continent": "América",
+    "description": "Ciudad patagónica rodeada de lagos y montañas, famosa por sus chocolates, deportes de invierno y paisajes de película.",
+    "coverImage": "https://images.unsplash.com/photo-1601922046210-9f8c7ba1f60a",
+    "images": [
+      "https://images.unsplash.com/photo-1601922046210-9f8c7ba1f60a"
+    ],
+    "rating": 4.6,
+    "climate": "Frío de montaña",
+    "bestSeasonToVisit": "Invierno",
+    "tags": ["montaña", "nieve", "naturaleza"],
+    "createdAt": "2025-02-01",
+    "location": { "lat": -41.1335, "lng": -71.3103 }
+  },
+  {
+    "id": 4,
+    "name": "Marrakech",
+    "country": "Marruecos",
+    "continent": "África",
+    "description": "Ciudad imperial marroquí conocida por sus zocos, palacios y la vibrante plaza Jemaa el-Fna.",
+    "coverImage": "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43",
+    "images": [
+      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43"
+    ],
+    "rating": 4.5,
+    "climate": "Semiárido",
+    "bestSeasonToVisit": "Primavera",
+    "tags": ["cultura", "mercados", "arquitectura"],
+    "createdAt": "2025-02-10",
+    "location": { "lat": 31.6295, "lng": -7.9811 }
+  },
+  {
+    "id": 5,
+    "name": "Santorini",
+    "country": "Grecia",
+    "continent": "Europa",
+    "description": "Isla griega famosa por sus casas blancas y azules, atardeceres icónicos y vistas al mar Egeo.",
+    "coverImage": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff",
+    "images": [
+      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff"
+    ],
+    "rating": 4.9,
+    "climate": "Mediterráneo",
+    "bestSeasonToVisit": "Verano",
+    "tags": ["playa", "romántico", "paisajes"],
+    "createdAt": "2025-02-15",
+    "location": { "lat": 36.3932, "lng": 25.4615 }
+  },
+  {
+    "id": 6,
+    "name": "Nueva York",
+    "country": "Estados Unidos",
+    "continent": "América",
+    "description": "La ciudad que nunca duerme, con rascacielos icónicos, Central Park y una escena cultural imparable.",
+    "coverImage": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9",
+    "images": [
+      "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9"
+    ],
+    "rating": 4.6,
+    "climate": "Continental",
+    "bestSeasonToVisit": "Otoño",
+    "tags": ["ciudad", "arquitectura", "vida nocturna"],
+    "createdAt": "2025-02-20",
+    "location": { "lat": 40.7128, "lng": -74.006 }
+  },
+  {
+    "id": 7,
+    "name": "Bali",
+    "country": "Indonesia",
+    "continent": "Asia",
+    "description": "Isla indonesia conocida por sus templos, arrozales en terraza y playas paradisíacas.",
+    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
+    "images": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4"
+    ],
+    "rating": 4.7,
+    "climate": "Tropical",
+    "bestSeasonToVisit": "Verano",
+    "tags": ["playa", "naturaleza", "espiritualidad"],
+    "createdAt": "2025-03-01",
+    "location": { "lat": -8.3405, "lng": 115.092 }
+  },
+  {
+    "id": 8,
+    "name": "Ciudad del Cabo",
+    "country": "Sudáfrica",
+    "continent": "África",
+    "description": "Ciudad costera al pie de la Montaña de la Mesa, con playas, viñedos cercanos y fauna única.",
+    "coverImage": "https://images.unsplash.com/photo-1580060839134-75a50d3f4e6a",
+    "images": [
+      "https://images.unsplash.com/photo-1580060839134-75a50d3f4e6a"
+    ],
+    "rating": 4.5,
+    "climate": "Mediterráneo",
+    "bestSeasonToVisit": "Primavera",
+    "tags": ["naturaleza", "playa", "aventura"],
+    "createdAt": "2025-03-05",
+    "location": { "lat": -33.9249, "lng": 18.4241 }
+  }
+]
