@@ -1,11 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BaseButton from '@/components/BaseButton.vue'
+</script>
+
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+    <div class="p-8 flex gap-4">
+    <BaseButton variant="primary" @click="() => alert('primary')">Primario</BaseButton>
+    <BaseButton variant="secondary">Secundario</BaseButton>
+    <BaseButton variant="danger" disabled>Deshabilitado</BaseButton>
+  </div>
 </template>
 
 <style scoped></style>
