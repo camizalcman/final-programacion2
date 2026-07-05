@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import BaseButton from '@/components/BaseButton.vue'
+import Navbar from '@/components/Navbar.vue'
 </script>
 
-
+//Router View donde el router inserta la vista actual
 <template>
-    <div class="p-8 flex gap-4">
-    <BaseButton variant="primary" @click="() => alert('primary')">Primario</BaseButton>
-    <BaseButton variant="secondary">Secundario</BaseButton>
-    <BaseButton variant="danger" disabled>Deshabilitado</BaseButton>
-  </div>
+  <Navbar />
+  <main class="min-h-screen bg-bg">
+    <RouterView />
+  </main>
 </template>
-
-<style scoped></style>
