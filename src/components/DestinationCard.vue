@@ -14,8 +14,9 @@
 //el : indica que es dinámico, toma el valor real del objeto que le pasaron.
 //el :key="tag" es obligatorio en los v-for
 <template>
-  <div
-    class="bg-bg-card rounded-2xl shadow-md overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-0.5 hover:shadow-md"
+    <RouterLink
+    :to="{ name: 'content-detail', params: { id: destination.id } }"
+    class="block bg-bg-card rounded-2xl shadow-md overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-1.5 hover:shadow-xl"
   >
     <img
       :src="destination.coverImage"
@@ -51,5 +52,5 @@
         </span>
       </div>
     </div>
-  </div>
+  </RouterLink>
 </template>

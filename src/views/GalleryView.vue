@@ -15,7 +15,7 @@ onMounted(() => {
     <h1 class="font-heading text-3xl font-semibold text-text mb-8">
       Descubrí tu próximo destino
     </h1>
-
+    
     <div v-if="contentStore.isLoading" class="text-center py-20 text-text-muted">
       Cargando destinos...
     </div>
