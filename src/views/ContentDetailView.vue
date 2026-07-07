@@ -33,16 +33,18 @@ onMounted(() => {
     </div>
 
     <div v-else class="pb-24">
-      <!-- HERO: imagen a pantalla completa -->
+      
       <div class="relative h-screen w-full overflow-hidden">
-        <img
-          :src="destination.coverImage"
-          :alt="destination.name"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
+        <div class="h-3/5 relative">
+          <img
+            :src="destination.coverImage"
+            :alt="destination.name"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
 
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
-
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        </div>
+        
         <RouterLink
           to="/"
           class="absolute top-6 left-6 flex items-center gap-2 text-white font-body text-sm hover:opacity-80 transition-opacity z-10"
@@ -50,13 +52,13 @@ onMounted(() => {
           ← Volver a destinos
         </RouterLink>
 
-        <h1 class="absolute bottom-24 left-8 font-heading text-9xl font-semibold text-white z-10">
+        <h1 class="absolute top-50 left-48 font-heading text-9xl font-semibold text-white z-10">
           {{ destination.name }}
         </h1>
       </div>
 
-      <!-- INFO: tarjeta superpuesta sobre el borde inferior del hero -->
-      <div class="relative z-20 -mt-16 px-6 sm:px-12">
+      
+      <div class="relative z-20 -mt-90 px-6 sm:px-12">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div class="bg-white/70 backdrop-blur-md rounded-2xl shadow-xl p-8">
             <div class="flex items-center gap-3 mb-2">
