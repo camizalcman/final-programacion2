@@ -7,6 +7,6 @@ import type { Content } from '@/types/Content'
 //as Content[] es un type assertion 
 
 export async function getContent(): Promise<Content[]> {
-  await new Promise((resolve) => setTimeout(resolve, 800))
+  await new Promise((resolve) => setTimeout(resolve, 3000))
   return contentData as Content[]
 }

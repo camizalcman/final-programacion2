@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import { useContentStore } from '@/stores/content'
 import DestinationCard from '@/components/DestinationCard.vue'
+import Loading from '@/components/Loading.vue'
 
 const contentStore = useContentStore()
 
@@ -16,9 +17,7 @@ onMounted(() => {
       Descubrí tu próximo destino
     </h1>
     
-    <div v-if="contentStore.isLoading" class="text-center py-20 text-text-muted">
-      Cargando destinos...
-    </div>
+    <Loading v-if="contentStore.isLoading" key="loading" />
 
     <div v-else-if="contentStore.error" class="text-center py-20 text-danger">
       {{ contentStore.error }}
