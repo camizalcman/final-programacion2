@@ -3,6 +3,8 @@
 
 <script setup lang="ts">
     import type { Content } from '@/types/Content'
+    import { MapPinIcon, StarIcon } from '@heroicons/vue/24/solid'
+
 
     interface Props {
         destination: Content
@@ -12,45 +14,34 @@
 </script>
 
 //el : indica que es dinámico, toma el valor real del objeto que le pasaron.
-//el :key="tag" es obligatorio en los v-for
 <template>
-    <RouterLink
+  <RouterLink
     :to="{ name: 'content-detail', params: { id: destination.id } }"
-    class="block bg-bg-card rounded-2xl shadow-md overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-1.5 hover:shadow-xl"
+    class="relative block h-80 rounded-2xl shadow-md overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-1.5 hover:shadow-xl"
   >
     <img
       :src="destination.coverImage"
       :alt="destination.name"
-      class="w-full h-48 object-cover"
+      class="absolute inset-0 w-full h-full object-cover"
     />
 
-    <div class="p-4">
-      <div class="flex items-center justify-between mb-1">
-        <h3 class="font-heading font-semibold text-lg text-text">
-          {{ destination.name }}
-        </h3>
-        <span class="font-body text-sm text-secondary font-medium">
-          {{ destination.rating }}
-        </span>
-      </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
 
-      <p class="font-body text-sm text-text-muted mb-2">
-        {{ destination.country }}
+    <!-- rating: arriba a la izquierda -->
+    <span
+      class="absolute top-3 right-3 bg-white/85 backdrop-blur-sm text-secondary font-body font-semibold text-xs px-2.5 py-1 rounded-full flex gap-1 items-center"
+    >
+       {{ destination.rating }}<StarIcon class="w-3 h-3 fill-secondary text-secondary" />
+    </span>
+
+    <!-- nombre + ubicacion: abajo a la izquierda -->
+    <div class="absolute bottom-4 left-4 right-4">
+      <h3 class="font-heading font-bold text-white text-3xl leading-tight drop-shadow-sm">
+         {{ destination.name }}
+      </h3>
+      <p class="font-body text-white/85 text-sm mt-1 flex gap-1">
+        <MapPinIcon class="w-4 h-4 text-primary" />{{ destination.country }}, {{ destination.continent }}
       </p>
-
-      <p class="font-body text-sm text-text-muted line-clamp-2">
-        {{ destination.description }}
-      </p>
-
-      <div class="flex flex-wrap gap-2 mt-3">
-        <span
-          v-for="tag in destination.tags"
-          :key="tag"
-          class="text-xs bg-primary/15 text-primary-dark px-2 py-1 rounded-full"
-        >
-          {{ tag }}
-        </span>
-      </div>
     </div>
   </RouterLink>
 </template>

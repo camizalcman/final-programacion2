@@ -43,8 +43,8 @@
     "description": "Ciudad patagónica rodeada de lagos y montañas, famosa por sus chocolates, deportes de invierno y paisajes de película.",
     "coverImage": "https://images.unsplash.com/photo-1601922046210-9f8c7ba1f60a",
     "images": [
-      "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99",
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba"
+      "https://images.unsplash.com/photo-1585116938581-6ee42e968c88",
+      "https://images.unsplash.com/photo-1517824806704-9040b037703b"
     ],
     "rating": 4.6,
     "climate": "Frío de montaña",
@@ -127,38 +127,38 @@
   },
   {
     "id": 8,
-    "name": "Ciudad del Cabo",
-    "country": "Sudáfrica",
-    "continent": "África",
-    "description": "Ciudad costera al pie de la Montaña de la Mesa, con playas, viñedos cercanos y fauna única.",
-    "coverImage": "https://images.unsplash.com/photo-1580060839134-75a50d3f4e6a",
+    "name": "Praga",
+    "country": "República Checa",
+    "continent": "Europa",
+    "description": "Ciudad de cuentos de hadas con su casco histórico medieval, el Puente de Carlos y el Castillo de Praga.",
+    "coverImage": "https://images.unsplash.com/photo-1541849546-216549ae216d",
     "images": [
-      "https://images.unsplash.com/photo-1577948000111-9c970dfe3743",
-      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5"
+      "https://images.unsplash.com/photo-1592906209472-a67f5b7f0d2f",
+      "https://images.unsplash.com/photo-1519677100203-a0e668c92439"
     ],
-    "rating": 4.5,
-    "climate": "Mediterráneo",
+    "rating": 4.6,
+    "climate": "Continental",
     "bestSeasonToVisit": "Primavera",
-    "tags": ["naturaleza", "playa", "aventura"],
+    "tags": ["arquitectura", "historia", "cultura"],
     "createdAt": "2025-03-05",
-    "location": { "lat": -33.9249, "lng": 18.4241 }
+    "location": { "lat": 50.0755, "lng": 14.4378 }
   },
   {
     "id": 9,
-    "name": "Sídney",
-    "country": "Australia",
-    "continent": "Oceanía",
-    "description": "Ciudad costera australiana famosa por su Ópera, el puerto natural y sus playas urbanas como Bondi Beach.",
-    "coverImage": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9",
+    "name": "Tel Aviv",
+    "country": "Israel",
+    "continent": "Asia",
+    "description": "Ciudad costera mediterránea conocida por sus playas urbanas, vida nocturna vibrante y arquitectura Bauhaus.",
+    "coverImage": "https://images.unsplash.com/photo-1544986581-efac024faf62",
     "images": [
-      "https://images.unsplash.com/photo-1524293581917-878a6d017c71",
-      "https://images.unsplash.com/photo-1523428096881-5bd79d043006"
+      "https://images.unsplash.com/photo-1544984243-ec57ea16fe25",
+      "https://images.unsplash.com/photo-1595521624992-48a59aef95c3"
     ],
-    "rating": 4.7,
-    "climate": "Templado oceánico",
+    "rating": 4.6,
+    "climate": "Mediterráneo",
     "bestSeasonToVisit": "Primavera",
-    "tags": ["playa", "arquitectura", "ciudad"],
+    "tags": ["playa", "vida nocturna", "arquitectura"],
     "createdAt": "2025-03-10",
-    "location": { "lat": -33.8688, "lng": 151.2093 }
+    "location": { "lat": 32.0853, "lng": 34.7818 }
   }
 ]
