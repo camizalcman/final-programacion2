@@ -3,6 +3,7 @@ import { onMounted } from 'vue'
 import { useContentStore } from '@/stores/content'
 import DestinationCard from '@/components/DestinationCard.vue'
 import Loading from '@/components/Loading.vue'
+import Hero from '@/components/Hero.vue'
 
 const contentStore = useContentStore()
 
@@ -12,7 +13,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="max-w-6xl mx-auto px-6 py-10">
+  <Hero />
+  <div class="max-w-6xl mx-auto px-6 pt-24">
     <h1 class="font-heading text-3xl font-semibold text-text mb-8">
       Descubrí tu próximo destino
     </h1>

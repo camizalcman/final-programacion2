@@ -20,7 +20,7 @@ import { Plane, MapPin } from 'lucide-vue-next'
       </div>
     </div>
 
-    <p class="font-body text-text-muted text-sm mt-6">
+    <p class="font-body text-text-muted text-xl mt-6">
       Buscando los mejores destinos...
     </p>
   </div>

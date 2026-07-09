@@ -5,10 +5,10 @@
     "country": "Japón",
     "continent": "Asia",
     "description": "Antigua capital imperial de Japón, famosa por sus templos budistas, jardines tradicionales y el histórico distrito de Gion.",
-    "coverImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e",
+    "coverImage": "/images/destinos/kioto1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1493997435110-f5c6f7cc2c74",
-      "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d"
+      "/images/destinos/kioto2.jpg",
+      "/images/destinos/kioto3.jpg"
     ],
     "rating": 4.8,
     "climate": "Templado",
@@ -23,10 +23,10 @@
     "country": "Italia",
     "continent": "Europa",
     "description": "Capital de Italia y cuna del Imperio Romano, con ruinas milenarias, arte renacentista y una gastronomía inigualable.",
-    "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "coverImage": "/images/destinos/roma1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b",
-      "https://images.unsplash.com/photo-1529260830199-42c24126f198"
+      "/images/destinos/roma2.jpg",
+      "/images/destinos/roma3.jpg"
     ],
     "rating": 4.7,
     "climate": "Mediterráneo",
@@ -41,10 +41,10 @@
     "country": "Argentina",
     "continent": "América",
     "description": "Ciudad patagónica rodeada de lagos y montañas, famosa por sus chocolates, deportes de invierno y paisajes de película.",
-    "coverImage": "https://images.unsplash.com/photo-1601922046210-9f8c7ba1f60a",
+    "coverImage": "/images/destinos/bariloche1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1585116938581-6ee42e968c88",
-      "https://images.unsplash.com/photo-1517824806704-9040b037703b"
+      "/images/destinos/bariloche2.jpg",
+      "/images/destinos/bariloche3.jpg"
     ],
     "rating": 4.6,
     "climate": "Frío de montaña",
@@ -59,10 +59,10 @@
     "country": "Marruecos",
     "continent": "África",
     "description": "Ciudad imperial marroquí conocida por sus zocos, palacios y la vibrante plaza Jemaa el-Fna.",
-    "coverImage": "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43",
+    "coverImage": "/images/destinos/marrakech1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada",
-      "https://images.unsplash.com/photo-1553603227-2358aabe821e"
+      "/images/destinos/marrakech2.jpg",
+      "/images/destinos/marrakech3.jpg"
     ],
     "rating": 4.5,
     "climate": "Semiárido",
@@ -77,10 +77,10 @@
     "country": "Grecia",
     "continent": "Europa",
     "description": "Isla griega famosa por sus casas blancas y azules, atardeceres icónicos y vistas al mar Egeo.",
-    "coverImage": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff",
+    "coverImage": "/images/destinos/santorini1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077",
-      "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a"
+      "/images/destinos/santorini2.jpg",
+      "/images/destinos/santorini3.jpg"
     ],
     "rating": 4.9,
     "climate": "Mediterráneo",
@@ -95,10 +95,10 @@
     "country": "Estados Unidos",
     "continent": "América",
     "description": "La ciudad que nunca duerme, con rascacielos icónicos, Central Park y una escena cultural imparable.",
-    "coverImage": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9",
+    "coverImage": "/images/destinos/nuevayork1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1522083165195-3424ed129620",
-      "https://images.unsplash.com/photo-1541336032412-2048a678540d"
+      "/images/destinos/nuevayork2.jpg",
+      "/images/destinos/nuevayork3.jpg"
     ],
     "rating": 4.6,
     "climate": "Continental",
@@ -113,10 +113,10 @@
     "country": "Indonesia",
     "continent": "Asia",
     "description": "Isla indonesia conocida por sus templos, arrozales en terraza y playas paradisíacas.",
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
+    "coverImage": "/images/destinos/bali1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62",
-      "https://images.unsplash.com/photo-1517816428104-797678c7cf0c"
+      "/images/destinos/bali2.jpg",
+      "/images/destinos/bali3.jpg"
     ],
     "rating": 4.7,
     "climate": "Tropical",
@@ -131,10 +131,10 @@
     "country": "República Checa",
     "continent": "Europa",
     "description": "Ciudad de cuentos de hadas con su casco histórico medieval, el Puente de Carlos y el Castillo de Praga.",
-    "coverImage": "https://images.unsplash.com/photo-1541849546-216549ae216d",
+    "coverImage": "/images/destinos/praga1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1592906209472-a67f5b7f0d2f",
-      "https://images.unsplash.com/photo-1519677100203-a0e668c92439"
+      "/images/destinos/praga2.jpg",
+      "/images/destinos/praga3.jpg"
     ],
     "rating": 4.6,
     "climate": "Continental",
@@ -149,10 +149,10 @@
     "country": "Israel",
     "continent": "Asia",
     "description": "Ciudad costera mediterránea conocida por sus playas urbanas, vida nocturna vibrante y arquitectura Bauhaus.",
-    "coverImage": "https://images.unsplash.com/photo-1544986581-efac024faf62",
+    "coverImage": "/images/destinos/telaviv1.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1544984243-ec57ea16fe25",
-      "https://images.unsplash.com/photo-1595521624992-48a59aef95c3"
+      "/images/destinos/telaviv2.jpg",
+      "/images/destinos/telaviv3.jpg"
     ],
     "rating": 4.6,
     "climate": "Mediterráneo",
@@ -160,5 +160,59 @@
     "tags": ["playa", "vida nocturna", "arquitectura"],
     "createdAt": "2025-03-10",
     "location": { "lat": 32.0853, "lng": 34.7818 }
+  },
+  {
+    "id": 10,
+    "name": "Río de Janeiro",
+    "country": "Brasil",
+    "continent": "América",
+    "description": "Ciudad brasileña famosa por sus playas, montañas, el Cristo Redentor y una vibrante combinación de naturaleza, cultura y música.",
+    "coverImage": "/images/destinos/rio1.jpg",
+    "images": [
+      "/images/destinos/rio2.jpg",
+      "/images/destinos/rio3.jpg"
+    ],
+    "rating": 4.7,
+    "climate": "Tropical",
+    "bestSeasonToVisit": "Verano",
+    "tags": ["playa", "naturaleza", "cultura"],
+    "createdAt": "2025-03-15",
+    "location": { "lat": -22.9068, "lng": -43.1729 }
+  },
+  {
+    "id": 11,
+    "name": "Melbourne",
+    "country": "Australia",
+    "continent": "Oceanía",
+    "description": "Ciudad conocida por su arte urbano, cafés, eventos culturales, arquitectura histórica y una gran diversidad gastronómica.",
+    "coverImage": "/images/destinos/melbourne1.jpg",
+    "images": [
+      "/images/destinos/melbourne2.jpg",
+      "/images/destinos/melbourne3.jpg"
+    ],
+    "rating": 4.6,
+    "climate": "Oceánico",
+    "bestSeasonToVisit": "Otoño",
+    "tags": ["arte", "gastronomía", "ciudad"],
+    "createdAt": "2025-03-18",
+    "location": { "lat": -37.8136, "lng": 144.9631 }
+  },
+  {
+    "id": 12,
+    "name": "Queenstown",
+    "country": "Nueva Zelanda",
+    "continent": "Oceanía",
+    "description": "Destino rodeado de montañas y lagos, reconocido por sus paisajes espectaculares y actividades de aventura al aire libre.",
+    "coverImage": "/images/destinos/queenstown1.jpg",
+    "images": [
+      "/images/destinos/queenstown2.jpg",
+      "/images/destinos/queenstown3.jpg"
+    ],
+    "rating": 4.8,
+    "climate": "Templado alpino",
+    "bestSeasonToVisit": "Primavera",
+    "tags": ["aventura", "montaña", "naturaleza"],
+    "createdAt": "2025-03-20",
+    "location": { "lat": -45.0312, "lng": 168.6626 }
   }
 ]

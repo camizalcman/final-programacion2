@@ -25,14 +25,14 @@ body {
 @keyframes fly {
   0% {
     left: 0%;
-    transform: translateX(0) translateY(0) rotate(0deg);
+    transform: translateX(0) translateY(0) rotate(45deg);
   }
   50% {
-    transform: translateY(-6px) rotate(3deg);
+    transform: translateY(-8px) rotate(45deg);
   }
   100% {
     left: 100%;
-    transform: translateX(-100%) translateY(0) rotate(0deg);
+    transform: translateX(-100%) translateY(0) rotate(45deg);
   }
 }
 

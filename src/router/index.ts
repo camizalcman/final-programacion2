@@ -6,6 +6,13 @@ import ResearchView from '@/views/ResearchView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
+  scrollBehavior() {
+    return {
+      top: 0
+    }
+  },
+
   routes: [
     { path: '/', name: 'gallery', component: GalleryView },
     { path: '/content/:id', name: 'content-detail', component: ContentDetailView },
