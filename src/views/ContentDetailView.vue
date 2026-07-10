@@ -3,6 +3,8 @@ import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useContentStore } from '@/stores/content'
 import { MapPinIcon, StarIcon, ChevronLeftIcon } from '@heroicons/vue/24/solid'
+import Loading from '@/components/Loading.vue'
+import Error from '@/components/Error.vue'
 
 
 const route = useRoute()
@@ -21,13 +23,13 @@ onMounted(() => {
 
 <template>
   <div>
-    <div v-if="contentStore.isLoading" class="text-center py-20 text-text-muted">
-      Cargando destino...
-    </div>
+    <Loading v-if="contentStore.isLoading" key="loading" />
+
+    <Error v-else-if="contentStore.error" key="error" :message="contentStore.error" />
 
     <div v-else-if="!destination" class="text-center py-20 text-text-muted">
       Destino no encontrado.
-      <RouterLink to="/" class="text-primary-dark underline">Volver a la galería</RouterLink>
+      <RouterLink to="/" class="text-primary-dark underline">Volver a la Home</RouterLink>
     </div>
 
     <div v-else>
