@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <nav class="flex items-center justify-between px-6 py-4 bg-bg-card shadow-md sticky top-0 z-10">
+  <nav class="flex items-center justify-between px-6 py-4 bg-bg-card shadow-md sticky top-0 z-30">
     <RouterLink to="/" class="font-heading font-semibold text-xl text-accent">
       Mundo Viajero
     </RouterLink>

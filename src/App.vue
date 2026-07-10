@@ -3,10 +3,10 @@ import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 </script>
 
-//Router View donde el router inserta la vista actual
+//Router View donde el router inserta la pagina correspondiente
 <template>
   <Navbar />
-  <main class="min-h-screen bg-bg">
+  <main class="min-h-screen">
     <RouterView />
   </main>
   <Footer />

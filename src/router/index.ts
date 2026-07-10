@@ -4,6 +4,7 @@ import ContentDetailView from '@/views/ContentDetailView.vue'
 import AdminView from '@/views/AdminView.vue'
 import ResearchView from '@/views/ResearchView.vue'
 
+//se definen las rutas
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
 
