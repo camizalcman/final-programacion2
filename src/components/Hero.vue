@@ -23,6 +23,12 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(interval)
 })
+
+const scrollToDestinations = () => {
+  document.getElementById('destinos')?.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
 </script>
 
 <template>
@@ -53,57 +59,31 @@ onUnmounted(() => {
           <rect width="100%" height="100%" fill="white" />
 
           <!-- Agujero ventana -->
-          <rect
-            x="15%"
-            y="15%"
-            width="20%"
-            height="70%"
-            rx="150"
-            fill="black"
-          />
+          <rect x="15%" y="15%" width="20%" height="70%" rx="150" fill="black" class="hidden xl:block"/>
         </mask>
       </defs>
 
       <!-- Overlay negro recortado -->
-      <rect
-        width="100%"
-        height="100%"
-        fill="black"
-        opacity="0.7"
-        mask="url(#window-mask)"
-      />
+      <rect width="100%" height="100%" fill="black" opacity="0.7" mask="url(#window-mask)"/>
     </svg>
 
 
     <!-- Marco de ventana -->
-    <div
-      class="
-        absolute
-        right-[65%]
-        top-1/2
-        h-[70vh]
-        w-[20%]
-        -translate-y-1/2
-        rounded-[150px]
-        border-8
-        border-white/30
-        shadow-2xl
-      "
-    ></div>
+    <div class="absolute right-[65%] top-1/2 h-[70vh] w-[20%] -translate-y-1/2 rounded-[150px] border-8 border-white/30 shadow-2xl hidden xl:block"></div>
 
 
     <!-- Contenido -->
-  <div class="relative z-20 flex h-full items-center justify-end px-6 lg:px-20">
-    <div class="w-full max-w-2xl text-center lg:mr-[12%] lg:text-left">
+  <div class="relative z-20 flex h-full items-center justify-end px-6 sm:px-12 lg:px-32 xl:px-8">
+    <div class="w-full max-w-2xl text-center xl:mr-[10%] text-left">
       <h1 class="font-heading text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
         Explorá el mundo
       </h1>
 
       <p class="mt-6 text-base text-white/80 sm:text-lg lg:text-xl">
-        Descubrí destinos increíbles y viví nuevas experiencias.
+        Descubrí ciudades increíbles que te van a encantar, viví nuevas experiencias y conocé nuevas culturas
       </p>
 
-      <button class="mt-8 rounded-full bg-primary px-8 py-3 font-medium text-accent transition hover:bg-primary-dark">
+      <button @click="scrollToDestinations" class="cursor-pointer mt-8 rounded-full bg-primary px-8 py-3 font-medium text-accent transition hover:bg-primary-dark">
         Ver destinos
       </button>
     </div>
