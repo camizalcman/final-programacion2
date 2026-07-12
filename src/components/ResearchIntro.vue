@@ -9,9 +9,10 @@
       :initial="{ opacity: 0, x: -40 }"
       :enter="{ opacity: 1, x: 0, transition: { duration: 600 } }"
     >
-      <h3 class="text-white text-2xl sm:text-4xl font-heading font-semibold leading-snug">
-        Vue es un framework de JavaScript <br class="hidden sm:block" />
-        para la creación de interfaces de usuario.
+      <h3 class="text-white text-2xl sm:text-4xl font-heading font-bold leading-snug">
+        <span class="font-extrabold">Vue es un framework de JavaScript</span>
+        <br class="hidden sm:block" />
+        <span class="font-medium">para la creación de interfaces de usuario.</span>
       </h3>
 
       <h4 class="text-white/70 font-body text-base sm:text-xl mt-6 leading-relaxed">

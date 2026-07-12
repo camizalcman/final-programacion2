@@ -7,37 +7,49 @@ import {
   CalculatorIcon,
   ClockIcon,
 } from '@heroicons/vue/24/solid'
+import ReactivityFeature from '@/components/features/ReactivityFeature.vue'
+import DirectivesFeature from '@/components/features/DirectivesFeature.vue'
+import PropsFeature from '@/components/features/PropsFeature.vue'
+import ComputedFeature from '@/components/features/ComputedFeature.vue'
+import LifecycleFeature from '@/components/features/LifecycleFeature.vue'
 
 const features = [
   {
     id: 'reactivity',
     title: 'Reactividad',
     icon: BoltIcon,
+    component: ReactivityFeature,
   },
   {
     id: 'directives',
     title: 'Directivas',
     icon: Square3Stack3DIcon,
+    component: DirectivesFeature,
   },
   {
     id: 'props',
     title: 'Props y comunicación',
     icon: ArrowsRightLeftIcon,
+    component: PropsFeature,
   },
   {
     id: 'computed',
     title: 'Computed properties',
     icon: CalculatorIcon,
+    component: ComputedFeature,
   },
   {
     id: 'lifecycle',
     title: 'Lifecycle Hooks',
     icon: ClockIcon,
+    component: LifecycleFeature,
   },
 ]
 
-const activeId = ref(features[0].id)
+//por defecto el activo es la primera feature
+const activeId = ref(features[0]?.id)
 
+//se busca el feature cuyo id sea = a activeID
 const activeFeature = computed(() =>
   features.find((f) => f.id === activeId.value)
 )
@@ -52,44 +64,38 @@ const activeFeature = computed(() =>
     <div class=" mx-auto lg:flex lg:gap-6">
 
       <!-- Cards con títulos -->
-      <div class="w-full lg:w-[40%]">
+      <div class="w-full lg:w-[30%]">
         <MotionGroup
           tag="div"
           preset="slideVisibleLeft"
-          :duration="1000"
+          :duration="500"
           class="flex flex-col gap-3"
         >
           <button
             v-for="feature in features"
             :key="feature.id"
             @click="activeId = feature.id"
-            class="flex items-center gap-2 w-[100%] px-4 py-6 rounded-xl cursor-pointer transition-all"
+            class="flex items-center gap-3 w-[100%] px-4 py-8 rounded-xl cursor-pointer transition-all"
             :class="
               activeId === feature.id
                 ? 'bg-primary text-accent'
-                : ' text-white/70 hover:bg-white/10 hover:text-white'
+                : ' text-white/90 hover:bg-white/10 hover:text-white'
             "
           >
             <component :is="feature.icon" class="w-5 h-5" />
-            <span>{{ feature.title }}</span>
+            <h2 class="font-heading font-semibold text-lg">{{ feature.title }}</h2>
           </button>
         </MotionGroup>
       </div>
 
-      <!-- Columna derecha -->
-      <div class="w-full lg:w-[60%] mt-8 lg:mt-0">
+      <!-- Explicacion de cada feature -->
+      <div class="w-full lg:w-[70%] mt-8 lg:mt-0">
         <Transition name="fade" mode="out-in">
           <div
             :key="activeId"
             class="bg-white/5 border border-primary rounded-2xl p-8 h-full"
           >
-            <h3 class="text-2xl font-semibold text-white mb-4">
-              {{ activeFeature?.title }}
-            </h3>
-
-            <p class="text-white/70">
-              Acá va el contenido...
-            </p>
+            <component :is="activeFeature?.component" />
           </div>
         </Transition>
       </div>
