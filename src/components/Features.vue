@@ -93,7 +93,7 @@ const activeFeature = computed(() =>
         <Transition name="fade" mode="out-in">
           <div
             :key="activeId"
-            class="bg-white/5 border border-primary rounded-2xl p-8 h-full"
+            class="bg-white/5 border border-primary rounded-2xl p-6 h-full"
           >
             <component :is="activeFeature?.component" />
           </div>
