@@ -3,7 +3,7 @@ import { Plane } from 'lucide-vue-next'
 </script>
 
 <template>
-  <footer class="bg-accent text-white mt-16">
+  <footer class="bg-accent text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div>
         <div class="flex items-center gap-2 font-heading font-semibold text-xl mb-2">

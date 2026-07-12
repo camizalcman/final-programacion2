@@ -1,5 +1,12 @@
+<script setup lang="ts">
+import Features from '@/components/Features.vue';
+import ResearchIntro from '@/components/ResearchIntro.vue'
+
+</script>
+
 <template>
-  <div class="p-8">
-    <h1 class="font-heading text-2xl text-text">Admin View</h1>
+  <div class="bg-accent min-h-screen">
+    <ResearchIntro />
+    <Features />
   </div>
 </template>

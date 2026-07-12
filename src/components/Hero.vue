@@ -79,7 +79,7 @@ const scrollToDestinations = () => {
         Explorá el mundo
       </h1>
 
-      <p class="mt-6 text-base text-white/80 sm:text-lg lg:text-xl">
+      <p class="mt-4 text-base text-white/80 sm:text-lg lg:text-xl">
         Descubrí ciudades increíbles que te van a encantar, viví nuevas experiencias y conocé nuevas culturas
       </p>
 
