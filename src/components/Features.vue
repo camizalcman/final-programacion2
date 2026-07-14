@@ -28,19 +28,19 @@ const features = [
   },
   {
     id: 'props',
-    title: 'Props y comunicación',
+    title: 'Comunicación entre componentes',
     icon: ArrowsRightLeftIcon,
     component: PropsFeature,
   },
   {
     id: 'computed',
-    title: 'Computed properties',
+    title: 'Propiedades computadas',
     icon: CalculatorIcon,
     component: ComputedFeature,
   },
   {
     id: 'lifecycle',
-    title: 'Lifecycle Hooks',
+    title: 'Ciclo de vida',
     icon: ClockIcon,
     component: LifecycleFeature,
   },
@@ -56,15 +56,15 @@ const activeFeature = computed(() =>
 </script>
 
 <template>
-  <section class="bg-accent px-6 lg:px-24 py-20">
-    <h2 class="font-heading text-3xl font-semibold text-white text-center mb-16">
-      Características principales
+  <section class="bg-accent py-20 gap-10 lg:gap-6 px-6 md:px-12 lg:px-24">
+    <h2 class="font-heading md:text-3xl text-2xl font-bold text-white text-start md:mb-8 mb-6">
+      Conceptos principales
     </h2>
 
-    <div class=" mx-auto lg:flex lg:gap-6">
+    <div class="mx-auto md:flex gap-2 md:gap-6">
 
       <!-- Cards con títulos -->
-      <div class="w-full lg:w-[30%]">
+      <div class="w-full md:w-[30%]">
         <MotionGroup
           tag="div"
           preset="slideVisibleLeft"
@@ -75,7 +75,7 @@ const activeFeature = computed(() =>
             v-for="feature in features"
             :key="feature.id"
             @click="activeId = feature.id"
-            class="flex items-center gap-3 w-[100%] px-4 py-8 rounded-xl cursor-pointer transition-all"
+            class="flex items-center text-left gap-3 w-[100%] px-4 py-4 md:py-8 rounded-xl cursor-pointer transition-all"
             :class="
               activeId === feature.id
                 ? 'bg-primary text-accent'
@@ -89,15 +89,18 @@ const activeFeature = computed(() =>
       </div>
 
       <!-- Explicacion de cada feature -->
-      <div class="w-full lg:w-[70%] mt-8 lg:mt-0">
-        <Transition name="fade" mode="out-in">
+      <div class="w-full md:w-[70%] mt-8 lg:mt-0"
+          v-motion
+      :initial="{ opacity: 0, x: 40 }"
+      :visible="{ opacity: 1, x: 0, transition: { duration: 600 } }"
+      >
+
           <div
             :key="activeId"
             class="bg-white/5 border border-primary rounded-2xl p-6 h-full"
           >
             <component :is="activeFeature?.component" />
           </div>
-        </Transition>
       </div>
 
     </div>

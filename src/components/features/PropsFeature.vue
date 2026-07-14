@@ -9,7 +9,7 @@ const edad = ref('...')
 <template>
   <div>
     <h3 class="text-2xl font-heading font-semibold text-white mb-4">
-      Props y comunicación
+      Comunicación entre componentes
     </h3>
 
     <p class="text-white/80 leading-relaxed mb-4">

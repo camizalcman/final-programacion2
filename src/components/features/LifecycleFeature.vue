@@ -20,11 +20,11 @@ onUnmounted(() => {
 <template>
   <div>
     <h3 class="text-2xl font-heading font-semibold text-white mb-4">
-      Lifecycle Hooks
+      Ciclo de vida
     </h3>
 
     <p class="text-white/80 leading-relaxed mb-4">
-      Los lifecycle hooks son funciones que permiten ejecutar código en momentos
+      Son funciones que permiten ejecutar código en momentos
       específicos del ciclo de vida de un componente Vue, como cuando se crea,
       se actualiza o se elimina.
     </p>

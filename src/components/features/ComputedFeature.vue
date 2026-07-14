@@ -20,11 +20,11 @@ const total = computed(() => {
 <template>
   <div>
     <h3 class="text-2xl font-heading font-semibold text-white mb-4">
-      Computed Properties
+      Propiedades computadas
     </h3>
 
     <p class="text-white/80 leading-relaxed mb-4">
-      Las propiedades computadas son valores que se calculan a partir de otros
+      Son valores que se calculan a partir de otros
       datos reactivos. Vue guarda el resultado y solo lo vuelve a calcular cuando
       sus dependencias cambian.
     </p>
