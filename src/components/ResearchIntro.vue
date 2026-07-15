@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const scrollToInfo = () => {
+  document.getElementById('info')?.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
 </script>
 
 <template>
@@ -19,7 +24,7 @@
         Proporciona un modelo de programación declarativo basado en componentes que permite
         desarrollar de forma eficiente.
       </h4>
-      <button class="cursor-pointer mt-8 rounded-full bg-primary px-8 py-3 font-medium text-accent transition hover:bg-primary-dark">Conocer más</button>
+      <button @click="scrollToInfo" class="cursor-pointer mt-8 rounded-full bg-primary px-8 py-3 font-medium text-accent transition hover:bg-primary-dark">Conocer más</button>
 
     </div>
 

@@ -10,7 +10,7 @@ import Vs from '@/components/Vs.vue';
 <template>
   <div class="bg-accent min-h-screen">
     <ResearchIntro />
-    <Features />
+    <Features id="info" />
     <Sfc />
     <Vs />
     <Info />

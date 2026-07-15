@@ -15,7 +15,7 @@ import { Plane } from 'lucide-vue-next'
         </p>
       </div>
 
-      <ul class="flex gap-6 text-sm text-white/80">
+      <ul class="flex gap-6 text-sm text-white/80 mt-4">
         <li><RouterLink to="/" class="hover:text-white transition-colors">Destinos</RouterLink></li>
         <li><RouterLink to="/admin" class="hover:text-white transition-colors">Admin</RouterLink></li>
         <li><RouterLink to="/research" class="hover:text-white transition-colors">Investigación</RouterLink></li>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 </script>
 <template>
   <div class="gap-10 lg:gap-6 px-6 md:px-12 lg:px-24 py-20">
@@ -13,26 +14,26 @@
     >
 
       <div class="border border-primary rounded-xl p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-white/5 hover:shadow-lg hover:shadow-primary/20">
-        <p class="text-3xl md:text-4xl font-bold text-primary mb-2 font-heading">
-          2014
-        </p>
+        <p class="text-3xl md:text-4xl font-bold text-primary mb-2 font-heading">2014</p>
+
         <h4 class="text-white font-semibold mb-2">
           Lanzamiento
         </h4>
+
         <p class="text-white/70 text-sm">
           Evan You presentó la primera versión
         </p>
       </div>
 
       <div class="border border-primary rounded-xl p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-white/5 hover:shadow-lg hover:shadow-primary/20">
-        <p class="text-3xl md:text-4xl font-bold text-primary mb-2 font-heading">
-          12 M+
-        </p>
+        <p class="text-3xl md:text-4xl font-bold text-primary mb-2 font-heading">12 M+</p>
+
         <h4 class="text-white font-semibold mb-2">
           Descargas semanales
         </h4>
+
         <p class="text-white/70 text-sm">
-          Instalaciones del paquete de Vue desde npm
+          Del paquete oficial de Vue desde npm 
         </p>
       </div>
 
