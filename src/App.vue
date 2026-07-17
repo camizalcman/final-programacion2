@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
+import { useAuthStore } from '@/stores/auth'
+import { onMounted } from 'vue'
+
+const authStore = useAuthStore()
+
+onMounted(() => {
+  authStore.restoreSession()
+})
+
 </script>
 
 //Router View donde el router inserta la pagina correspondiente

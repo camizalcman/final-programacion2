@@ -21,8 +21,11 @@ export const useAuthStore = defineStore('auth', () => {
       (u) => u.email === email && u.password === password
     )
 
+    //guarda el usuario en el almacenimiento persistente del navegador
+    //JSON.stringify() convierte el objeto a texto, porque localStorage solo puede guardar strings
     if (found) {
       currentUser.value = found
+      localStorage.setItem('currentUser', JSON.stringify(found))
       return true
     }
 
@@ -33,7 +36,17 @@ export const useAuthStore = defineStore('auth', () => {
   //los componentes que reaccionan a isLoggedIn o isAdmin reaccionan solos
   function logout() {
     currentUser.value = null
+    localStorage.removeItem('currentUser')
   }
 
-  return { currentUser, isLoggedIn, isAdmin, login, logout }
+  //busca si hay algo guardado en localStorage y si existe lo convierte de vuelta a objeto y lo asigna a currentUser
+  //esta función se llama al arrancar la app
+  function restoreSession() {
+    const saved = localStorage.getItem('currentUser')
+    if (saved) {
+      currentUser.value = JSON.parse(saved) as User
+    }
+  }
+
+  return { currentUser, isLoggedIn, isAdmin, login, logout, restoreSession }
 })
