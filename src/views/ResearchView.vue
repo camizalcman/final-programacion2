@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Features from '@/components/Features.vue';
-import Info from '@/components/Info.vue';
-import ResearchIntro from '@/components/ResearchIntro.vue'
-import Sfc from '@/components/Sfc.vue';
-import Vs from '@/components/Vs.vue';
+import Features from '@/components/research/Features.vue';
+import Info from '@/components/research/Info.vue';
+import ResearchIntro from '@/components/research/ResearchIntro.vue'
+import Sfc from '@/components/research/Sfc.vue';
+import Vs from '@/components/research/Vs.vue';
 
 </script>
 

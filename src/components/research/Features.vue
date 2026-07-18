@@ -7,11 +7,11 @@ import {
   CalculatorIcon,
   ClockIcon,
 } from '@heroicons/vue/24/solid'
-import ReactivityFeature from '@/components/features/ReactivityFeature.vue'
-import DirectivesFeature from '@/components/features/DirectivesFeature.vue'
-import PropsFeature from '@/components/features/PropsFeature.vue'
-import ComputedFeature from '@/components/features/ComputedFeature.vue'
-import LifecycleFeature from '@/components/features/LifecycleFeature.vue'
+import ReactivityFeature from '@/components/research/features/ReactivityFeature.vue'
+import DirectivesFeature from '@/components/research/features/DirectivesFeature.vue'
+import PropsFeature from '@/components/research/features/PropsFeature.vue'
+import ComputedFeature from '@/components/research/features/ComputedFeature.vue'
+import LifecycleFeature from '@/components/research/features/LifecycleFeature.vue'
 
 const features = [
   {

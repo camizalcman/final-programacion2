@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import UserCard from './UserCard.vue'
 
 const nombre = ref('...')
-const edad = ref('...')
+const edad = ref(0)
 </script>
 
 <template>
