@@ -6,7 +6,9 @@ import { useUsersStore } from '@/stores/users'
 import { ShieldExclamationIcon, MapIcon, UsersIcon, PencilIcon, TrashIcon, PlusIcon, } from '@heroicons/vue/24/solid'
 import FormModal from '@/components/FormModal.vue'
 import type { Content } from '@/types/Content'
-import feedback from '@/components/Feedback.vue'
+import Feedback from '@/components/Feedback.vue'
+import UserFormModal from '@/components/UserFormModal.vue'
+import type { User } from '@/types/User'
 
 const authStore = useAuthStore()
 const contentStore = useContentStore()
@@ -69,6 +71,40 @@ function triggerToast(message: string) {
   }, 2500)
 }
 
+const isUserModalOpen = ref(false)
+const editingUserItem = ref<User | null>(null)
+
+function openCreateUserModal() {
+  editingUserItem.value = null
+  isUserModalOpen.value = true
+}
+
+function openEditUserModal(user: User) {
+  editingUserItem.value = user
+  isUserModalOpen.value = true
+}
+
+function handleSaveUser(data: Omit<User, 'registerDate' | 'likedPostIDs'>) {
+  if (editingUserItem.value) {
+    usersStore.updateUser(editingUserItem.value.email, data)
+    triggerToast('Usuario actualizado con éxito')
+  } else {
+    usersStore.addUser({
+      ...data,
+      registerDate: new Date().toISOString().split('T')[0] as string,
+      likedPostIDs: [],
+    })
+    triggerToast('Usuario creado con éxito')
+  }
+  isUserModalOpen.value = false
+}
+
+function handleDeleteUser(email: string) {
+  if (confirm('¿Estás segura de que querés borrar este usuario?')) {
+    usersStore.deleteUser(email)
+    triggerToast('Usuario eliminado')
+  }
+}
 
 </script>
 
@@ -174,14 +210,25 @@ function triggerToast(message: string) {
         </div>
 
         <div v-else key="users">
-          <p class="text-text-muted text-sm mb-4">{{ usersStore.items.length }} usuarios</p>
-          <div class="bg-bg-card rounded-2xl shadow-sm overflow-hidden">
+          <div class="flex items-center justify-between mb-4">
+            <p class="text-text-muted text-sm">{{ usersStore.items.length }} usuarios</p>
+            <button
+              @click="openCreateUserModal"
+              class="cursor-pointer flex items-center gap-2 bg-primary text-accent text-sm font-medium px-4 py-2 rounded-full hover:bg-primary-dark transition-colors"
+            >
+              <PlusIcon class="w-4 h-4" />
+              Nuevo usuario
+            </button>
+          </div>
+
+          <div class="bg-bg-card rounded-2xl shadow-sm overflow-hidden overflow-x-auto">
             <table class="w-full text-sm">
               <thead class="bg-bg border-b border-border">
                 <tr class="text-left text-text-muted">
                   <th class="px-4 py-3 font-medium">Nombre</th>
                   <th class="px-4 py-3 font-medium">Email</th>
                   <th class="px-4 py-3 font-medium">Admin</th>
+                  <th class="px-4 py-3 font-medium text-right">Acciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -195,6 +242,24 @@ function triggerToast(message: string) {
                   <td class="px-4 py-3">
                     <span v-if="user.isAdmin" class="text-primary-dark font-medium">Sí</span>
                     <span v-else class="text-text-muted">No</span>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex justify-end gap-2">
+                      <button
+                        @click="openEditUserModal(user)"
+                        class="cursor-pointer text-text-muted hover:text-primary-dark p-1.5 rounded-lg hover:bg-primary/10 transition-colors"
+                        title="Editar"
+                      >
+                        <PencilIcon class="w-4 h-4" />
+                      </button>
+                      <button
+                        @click="handleDeleteUser(user.email)"
+                        class="cursor-pointer text-text-muted hover:text-danger p-1.5 rounded-lg hover:bg-danger/10 transition-colors"
+                        title="Borrar"
+                      >
+                        <TrashIcon class="w-4 h-4" />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -210,7 +275,15 @@ function triggerToast(message: string) {
       @close="isContentModalOpen = false"
       @save="handleSaveContent"
     />
-    <Toast :message="toastMessage" :show="showToast" />
+
+    <UserFormModal
+      :is-open="isUserModalOpen"
+      :editing-item="editingUserItem"
+      @close="isUserModalOpen = false"
+      @save="handleSaveUser"
+    />
+
+    <Feedback :message="toastMessage" :show="showToast" />
 
   </div>
 </template>

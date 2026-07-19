@@ -31,7 +31,7 @@ defineProps<{
              <ChevronLeftIcon class="w-4 h-4" />Volver a destinos
             </RouterLink>
 
-            <h1 class="font-heading font-semibold text-white text-5xl sm:text-6xl lg:text-8xl leading-none">
+            <h1 class="font-heading font-bold text-white text-5xl sm:text-6xl lg:text-8xl leading-none">
               {{ destination.name }}
             </h1>
           </div>

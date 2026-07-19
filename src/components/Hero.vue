@@ -74,8 +74,8 @@ const scrollToDestinations = () => {
 
     <!-- Contenido -->
   <div class="relative z-20 flex h-full items-center justify-end px-6 sm:px-12 lg:px-32 xl:px-8">
-    <div class="w-full max-w-2xl text-center xl:mr-[10%] text-left">
-      <h1 class="font-heading text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+    <div class="w-full max-w-2xl xl:mr-[10%] text-left">
+      <h1 class="font-heading text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
         Explorá el mundo
       </h1>
 
