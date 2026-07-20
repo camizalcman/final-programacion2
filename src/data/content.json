@@ -14,8 +14,7 @@
     "climate": "Templado",
     "bestSeasonToVisit": "Primavera",
     "tags": ["cultura", "templos", "naturaleza"],
-    "createdAt": "2025-01-15",
-    "location": { "lat": 35.0116, "lng": 135.7681 }
+    "createdAt": "2025-01-15"
   },
   {
     "id": 2,
@@ -32,8 +31,7 @@
     "climate": "Mediterráneo",
     "bestSeasonToVisit": "Otoño",
     "tags": ["historia", "gastronomía", "arte"],
-    "createdAt": "2025-01-20",
-    "location": { "lat": 41.9028, "lng": 12.4964 }
+    "createdAt": "2025-01-20"
   },
   {
     "id": 3,
@@ -50,8 +48,7 @@
     "climate": "Frío de montaña",
     "bestSeasonToVisit": "Invierno",
     "tags": ["montaña", "nieve", "naturaleza"],
-    "createdAt": "2025-02-01",
-    "location": { "lat": -41.1335, "lng": -71.3103 }
+    "createdAt": "2025-02-01"
   },
   {
     "id": 4,
@@ -68,8 +65,7 @@
     "climate": "Semiárido",
     "bestSeasonToVisit": "Primavera",
     "tags": ["cultura", "mercados", "arquitectura"],
-    "createdAt": "2025-02-10",
-    "location": { "lat": 31.6295, "lng": -7.9811 }
+    "createdAt": "2025-02-10"
   },
   {
     "id": 5,
@@ -86,8 +82,7 @@
     "climate": "Mediterráneo",
     "bestSeasonToVisit": "Verano",
     "tags": ["playa", "romántico", "paisajes"],
-    "createdAt": "2025-02-15",
-    "location": { "lat": 36.3932, "lng": 25.4615 }
+    "createdAt": "2025-02-15"
   },
   {
     "id": 6,
@@ -104,8 +99,7 @@
     "climate": "Continental",
     "bestSeasonToVisit": "Otoño",
     "tags": ["ciudad", "arquitectura", "vida nocturna"],
-    "createdAt": "2025-02-20",
-    "location": { "lat": 40.7128, "lng": -74.006 }
+    "createdAt": "2025-02-20"
   },
   {
     "id": 7,
@@ -122,8 +116,7 @@
     "climate": "Tropical",
     "bestSeasonToVisit": "Verano",
     "tags": ["playa", "naturaleza", "espiritualidad"],
-    "createdAt": "2025-03-01",
-    "location": { "lat": -8.3405, "lng": 115.092 }
+    "createdAt": "2025-03-01"
   },
   {
     "id": 8,
@@ -140,8 +133,7 @@
     "climate": "Continental",
     "bestSeasonToVisit": "Primavera",
     "tags": ["arquitectura", "historia", "cultura"],
-    "createdAt": "2025-03-05",
-    "location": { "lat": 50.0755, "lng": 14.4378 }
+    "createdAt": "2025-03-05"
   },
   {
     "id": 9,
@@ -158,8 +150,7 @@
     "climate": "Mediterráneo",
     "bestSeasonToVisit": "Primavera",
     "tags": ["playa", "vida nocturna", "arquitectura"],
-    "createdAt": "2025-03-10",
-    "location": { "lat": 32.0853, "lng": 34.7818 }
+    "createdAt": "2025-03-10"
   },
   {
     "id": 10,
@@ -176,8 +167,7 @@
     "climate": "Tropical",
     "bestSeasonToVisit": "Verano",
     "tags": ["playa", "naturaleza", "cultura"],
-    "createdAt": "2025-03-15",
-    "location": { "lat": -22.9068, "lng": -43.1729 }
+    "createdAt": "2025-03-15"
   },
   {
     "id": 11,
@@ -194,8 +184,7 @@
     "climate": "Oceánico",
     "bestSeasonToVisit": "Otoño",
     "tags": ["arte", "gastronomía", "ciudad"],
-    "createdAt": "2025-03-18",
-    "location": { "lat": -37.8136, "lng": 144.9631 }
+    "createdAt": "2025-03-18"
   },
   {
     "id": 12,
@@ -212,7 +201,6 @@
     "climate": "Templado alpino",
     "bestSeasonToVisit": "Primavera",
     "tags": ["aventura", "montaña", "naturaleza"],
-    "createdAt": "2025-03-20",
-    "location": { "lat": -45.0312, "lng": 168.6626 }
+    "createdAt": "2025-03-20"
   }
 ]

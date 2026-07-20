@@ -15,8 +15,4 @@ export interface Content {
 
   createdAt: string
 
-  location: {
-    lat: number
-    lng: number
-  }
 }
