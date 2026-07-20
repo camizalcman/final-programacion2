@@ -3,12 +3,18 @@ import { ref, onMounted } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import { useContentStore } from '@/stores/content'
 import { useUsersStore } from '@/stores/users'
-import { ShieldExclamationIcon, MapIcon, UsersIcon, PencilIcon, TrashIcon, PlusIcon, } from '@heroicons/vue/24/solid'
+import { ShieldExclamationIcon, MapIcon, UsersIcon, PencilIcon, TrashIcon, PlusIcon, StarIcon } from '@heroicons/vue/24/solid'
 import FormModal from '@/components/FormModal.vue'
 import type { Content } from '@/types/Content'
 import Feedback from '@/components/Feedback.vue'
 import UserFormModal from '@/components/UserFormModal.vue'
 import type { User } from '@/types/User'
+import ConfirmModal from '@/components/ConfirmModal.vue'
+
+const showConfirmModal = ref(false)
+const deleteType = ref<'content' | 'user' | null>(null)
+const contentIdToDelete = ref<number | null>(null)
+const userEmailToDelete = ref<string | null>(null)
 
 const authStore = useAuthStore()
 const contentStore = useContentStore()
@@ -54,10 +60,9 @@ function handleSaveContent(data: Omit<Content, 'id' | 'createdAt'>) {
 }
 
 function handleDeleteContent(id: number) {
-  if (confirm('¿Estás segura de que querés borrar este destino?')) {
-    contentStore.deleteContent(id)
-    triggerToast('Destino eliminado')
-  }
+  deleteType.value = 'content'
+  contentIdToDelete.value = id
+  showConfirmModal.value = true
 }
 
 const toastMessage = ref('')
@@ -100,12 +105,35 @@ function handleSaveUser(data: Omit<User, 'registerDate' | 'likedPostIDs'>) {
 }
 
 function handleDeleteUser(email: string) {
-  if (confirm('¿Estás segura de que querés borrar este usuario?')) {
-    usersStore.deleteUser(email)
-    triggerToast('Usuario eliminado')
-  }
+  deleteType.value = 'user'
+  userEmailToDelete.value = email
+  showConfirmModal.value = true
 }
 
+function confirmDelete() {
+  if (deleteType.value === 'content' && contentIdToDelete.value !== null) {
+    contentStore.deleteContent(contentIdToDelete.value)
+    triggerToast('Destino eliminado')
+  }
+
+  if (deleteType.value === 'user' && userEmailToDelete.value) {
+    usersStore.deleteUser(userEmailToDelete.value)
+    triggerToast('Usuario eliminado')
+  }
+
+  resetConfirmModal()
+}
+
+function cancelDelete() {
+  resetConfirmModal()
+}
+
+function resetConfirmModal() {
+  showConfirmModal.value = false
+  deleteType.value = null
+  contentIdToDelete.value = null
+  userEmailToDelete.value = null
+}
 </script>
 
 <template>
@@ -184,7 +212,7 @@ function handleDeleteUser(email: string) {
                 >
                   <td class="px-4 py-3 text-text font-medium">{{ item.name }}</td>
                   <td class="px-4 py-3 text-text-muted">{{ item.country }}</td>
-                  <td class="px-4 py-3 text-text-muted">⭐ {{ item.rating }}</td>
+                  <td class="px-4 py-3 text-text-muted flex gap-2">{{ item.rating }}<StarIcon class="w-4 h-4 text-secondary" /></td> 
                   <td class="px-4 py-3">
                     <div class="flex justify-end gap-2">
                       <button
@@ -285,5 +313,18 @@ function handleDeleteUser(email: string) {
 
     <Feedback :message="toastMessage" :show="showToast" />
 
+    <ConfirmModal
+      :isOpen="showConfirmModal"
+      :title="deleteType === 'content' ? 'Eliminar destino' : 'Eliminar usuario'"
+      :message="
+        deleteType === 'content'
+          ? '¿Estás seguro de que deseas borrar este destino? Esta acción no se puede deshacer.'
+          : '¿Estás seguro de que deseas borrar este usuario? Esta acción no se puede deshacer.'
+      "
+      confirmText="Eliminar"
+      cancelText="Cancelar"
+      @confirm="confirmDelete"
+      @cancel="cancelDelete"
+    />
   </div>
 </template>
