@@ -10,6 +10,21 @@ export const useContentStore = defineStore('content', () => {
   const items = ref<Content[]>([])
   const isLoading = ref(false)
   const error = ref<string | null>(null)
+    const selectedContinent = ref<string | null>(null)
+
+   const filteredItems = computed(() => {
+    if (!selectedContinent.value) return items.value
+    return items.value.filter((item) => item.continent === selectedContinent.value)
+  })
+
+  const continents = computed(() => {
+    const unique = new Set(items.value.map((item) => item.continent))
+    return Array.from(unique)
+  })
+
+  function setContinentFilter(continent: string | null) {
+    selectedContinent.value = selectedContinent.value === continent ? null : continent
+  }
 
   async function fetchContent() {
     isLoading.value = true
@@ -54,5 +69,5 @@ export const useContentStore = defineStore('content', () => {
     items.value = items.value.filter((item) => item.id !== id)
   }
 
-  return { items, isLoading, error, fetchContent, addContent, updateContent, deleteContent }
+  return { items, isLoading, error, fetchContent, addContent, updateContent, deleteContent, selectedContinent, filteredItems, continents, setContinentFilter, }
 })

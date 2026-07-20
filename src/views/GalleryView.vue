@@ -5,6 +5,7 @@ import DestinationCard from '@/components/DestinationCard.vue'
 import Loading from '@/components/Loading.vue'
 import Hero from '@/components/Hero.vue'
 import Error from '@/components/Error.vue'
+import ContinentFilter from '@/components/ContinentFilter.vue'
 
 const contentStore = useContentStore()
 
@@ -19,6 +20,8 @@ onMounted(() => {
     <h1 class="font-heading text-3xl font-semibold text-text mb-8">
       Descubrí tu próximo destino
     </h1>
+
+    <ContinentFilter v-if="!contentStore.isLoading" />
     
     <Loading v-if="contentStore.isLoading" key="loading" />
 
@@ -26,7 +29,7 @@ onMounted(() => {
 
     <section v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
       <DestinationCard
-        v-for="item in contentStore.items"
+        v-for="item in contentStore.filteredItems"
         :key="item.id"
         :destination="item"
       />

@@ -39,7 +39,7 @@
     "id": 3,
     "name": "Bariloche",
     "country": "Argentina",
-    "continent": "América",
+    "continent": "América del Sur",
     "description": "Ciudad patagónica rodeada de lagos y montañas, famosa por sus chocolates, deportes de invierno y paisajes de película.",
     "coverImage": "/images/destinos/bariloche1.jpg",
     "images": [
@@ -93,7 +93,7 @@
     "id": 6,
     "name": "Nueva York",
     "country": "Estados Unidos",
-    "continent": "América",
+    "continent": "América del Norte",
     "description": "La ciudad que nunca duerme, con rascacielos icónicos, Central Park y una escena cultural imparable.",
     "coverImage": "/images/destinos/nuevayork1.jpg",
     "images": [
@@ -165,7 +165,7 @@
     "id": 10,
     "name": "Río de Janeiro",
     "country": "Brasil",
-    "continent": "América",
+    "continent": "América del Sur",
     "description": "Ciudad brasileña famosa por sus playas, montañas, el Cristo Redentor y una vibrante combinación de naturaleza, cultura y música.",
     "coverImage": "/images/destinos/rio1.jpg",
     "images": [
