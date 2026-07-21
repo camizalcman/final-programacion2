@@ -8,7 +8,7 @@ import Vs from '@/components/research/Vs.vue';
 </script>
 
 <template>
-  <div class="bg-accent min-h-screen">
+  <div class="bg-accent">
     <ResearchIntro />
     <Features id="info" />
     <Sfc />

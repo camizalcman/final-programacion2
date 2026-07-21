@@ -4,7 +4,7 @@ import { Plane, MapPin } from 'lucide-vue-next'
 
 <template>
   <div class="flex flex-col items-center justify-center py-24">
-    <div class="relative w-100 h-16">
+    <div class="relative w-full max-w-100 h-16">
       
       <div class="absolute top-1/2 left-0 right-0 border-t-2 border-dashed border-border -translate-y-1/2"></div>
 

@@ -56,7 +56,7 @@ const activeFeature = computed(() =>
 </script>
 
 <template>
-  <section class="bg-accent py-20 gap-10 lg:gap-6 px-6 md:px-12 lg:px-24">
+  <section class="bg-accent py-20 gap-10 lg:gap-6 px-6 md:px-12 lg:px-24 overflow-x-hidden">
     <h2 class="font-heading md:text-3xl text-2xl font-bold text-white text-start md:mb-8 mb-6">
       Conceptos principales
     </h2>
@@ -89,7 +89,7 @@ const activeFeature = computed(() =>
       </div>
 
       <!-- Explicacion de cada feature -->
-      <div class="w-full md:w-[70%] mt-8 lg:mt-0"
+      <div class="w-full md:w-[70%] mt-8 lg:mt-0" 
           v-motion
       :initial="{ opacity: 0, x: 40 }"
       :visible="{ opacity: 1, x: 0, transition: { duration: 600 } }"

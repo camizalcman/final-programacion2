@@ -94,7 +94,7 @@ function confirmLogout() {
     <ConfirmModal
       :is-open="isLogoutModalOpen"
       title="Cerrar sesión"
-      message="¿Estás segura de que querés cerrar tu sesión?"
+      message="¿Estás seguro de que querés cerrar tu sesión?"
       confirm-text="Sí, cerrar sesión"
       @confirm="confirmLogout"
       @cancel="isLogoutModalOpen = false"
