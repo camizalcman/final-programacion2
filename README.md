@@ -19,7 +19,7 @@ Sitio web que presenta diferente ciudades del mundo junto a una investigación l
 
 ## Cómo correr el proyecto localmente
 
-\`\`\`bash
+```bash
 # Clonar el repositorio
 git clone [link del repositorio]
 cd final-programacion2
@@ -29,7 +29,7 @@ npm install
 
 # Correr en modo desarrollo
 npm run dev
-\`\`\`
+```
 
 El sitio va a estar disponible en `http://localhost:5173`.
 
