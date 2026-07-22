@@ -31,17 +31,15 @@ npm install
 npm run dev
 ```
 
-El sitio va a estar disponible en `http://localhost:5173`.
-
 ## Credenciales de acceso
 
 Para probar el panel de Administración, se necesita ingresar con un usuario que tenga permisos de admin.
 
 **Usuario administrador:**
-\`\`\`
+```
 Email: admin@viajes.com
 Contraseña: admin123
-\`\`\`
+```
 
 También hay usuarios comunes (sin permisos de admin) cargados en `src/data/users.json`, útiles para probar el mensaje de "acceso restringido" al panel de Admin.
 
