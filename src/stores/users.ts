@@ -5,8 +5,11 @@ import type { User } from '@/types/User'
 import { AdminRequest } from '@/utils/AdminRequest'
 
 export const useUsersStore = defineStore('users', () => {
+
+  //se crea una copia editable del array del JSON, en vez de usar la referencia original importada 
   const items = ref<User[]>([...(usersData as User[])])
 
+  //se crea una instancia con method POST
   function addUser(newUser: User) {
     const req = new AdminRequest('POST', '/api/users', newUser)
     req.log()
@@ -14,6 +17,8 @@ export const useUsersStore = defineStore('users', () => {
     items.value.push(newUser)
   }
 
+   //se crea una instancia con method PUT
+  //se usa el email como identificador único, ya que User no tiene un campo id
   function updateUser(email: string, updatedData: Partial<User>) {
     const req = new AdminRequest('PUT', `/api/users/${email}`, updatedData)
     req.log()
@@ -24,6 +29,7 @@ export const useUsersStore = defineStore('users', () => {
     }
   }
 
+  //se crea una instancia con method DELETE
   function deleteUser(email: string) {
     const req = new AdminRequest('DELETE', `/api/users/${email}`, null)
     req.log()

@@ -12,21 +12,21 @@ const nombre = ref('')
 
     <p class="text-white/80 leading-relaxed mb-4">
       Es el mecanismo por el cual, al cambiar un dato,
-      todo lo que depende de ese dato en la interfaz se actualiza automáticamente.Vue utiliza internamente <strong>Proxy</strong>, para "vigilar" las variables reactivas.
+      todo lo que depende de ese dato en la interfaz se actualiza automáticamente.Vue utiliza internamente <strong>Proxy</strong>, para "controlar" las variables reactivas.
     </p>
 
     <div class="bg-accent/60 rounded-xl border border-primary p-4 mb-6">
 
       <ul class="space-y-2 text-white/80">
         <li>
-          <strong class="text-primary">ref()</strong>
+          <strong class="text-primary">ref( )</strong>
           → Para un valor individual (número, texto o booleano). En el
           <strong>script</strong> se accede mediante
           <code class="text-primary">.value</code>.
         </li>
 
         <li>
-          <strong class="text-primary">reactive()</strong>
+          <strong class="text-primary">reactive( )</strong>
           → Para que un objeto completo sea reactivo.
           Sus propiedades pueden accederse directamente.
         </li>

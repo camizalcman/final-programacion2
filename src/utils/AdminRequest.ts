@@ -1,5 +1,6 @@
 //declaro la clase AdminRequest
 export class AdminRequest {
+  //propiedades de la clase
   method: 'POST' | 'PUT' | 'DELETE'
   endpoint: string
   body: unknown
@@ -12,6 +13,7 @@ export class AdminRequest {
     this.timestamp = new Date().toISOString()
   }
 
+  //metodo propio de la clase
   log() {
     console.log(
       `%c[AdminRequest] ${this.method} ${this.endpoint}`,

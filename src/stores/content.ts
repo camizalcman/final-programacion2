@@ -10,18 +10,24 @@ export const useContentStore = defineStore('content', () => {
   const items = ref<Content[]>([])
   const isLoading = ref(false)
   const error = ref<string | null>(null)
+
+    //guarda el continente actualmente filtrado, o null si no hay ningún filtro activo
     const selectedContinent = ref<string | null>(null)
 
+    //si no hay filtro seleccionado devuelve todos los items,si hay uno, devuelve solo los que coinciden con ese continente
    const filteredItems = computed(() => {
     if (!selectedContinent.value) return items.value
     return items.value.filter((item) => item.continent === selectedContinent.value)
   })
 
+  //saca la lista de continentes únicos que existen en los destinos cargados,usando Set (no permite duplicados) y Array.from para convertirlo de vuelta a array
   const continents = computed(() => {
     const unique = new Set(items.value.map((item) => item.continent))
     return Array.from(unique)
   })
 
+    //si tocás el mismo continente que ya estaba activo, lo desactiva (vuelve a null, sin filtro)
+  //si tocás uno distinto, lo activa como nuevo filtro
   function setContinentFilter(continent: string | null) {
     selectedContinent.value = selectedContinent.value === continent ? null : continent
   }

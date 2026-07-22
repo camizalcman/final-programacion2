@@ -11,8 +11,12 @@ import UserFormModal from '@/components/UserFormModal.vue'
 import type { User } from '@/types/User'
 import ConfirmModal from '@/components/ConfirmModal.vue'
 
+//estado del modal de confirmacion antes de borrar contenido y usuarios
 const showConfirmModal = ref(false)
+
+//guarda lo que se esta por borrar, para saber que mensaje mostrar y que store llamar al confirmar
 const deleteType = ref<'content' | 'user' | null>(null)
+
 const contentIdToDelete = ref<number | null>(null)
 const userEmailToDelete = ref<string | null>(null)
 
@@ -20,24 +24,28 @@ const authStore = useAuthStore()
 const contentStore = useContentStore()
 const usersStore = useUsersStore()
 
+//controla que tab esta activo: Contenido o Usuarios
 const activeTab = ref<'content' | 'users'>('content')
 
+//si entro directo a /admin sin pasar antes por la Galeria, el store todavia no tiene destinos cargados
 onMounted(() => {
   if (contentStore.items.length === 0) {
     contentStore.fetchContent()
   }
 })
 
-// Modal
+// Modal de contenido
+//para identificar que tipo de modal es
 const isContentModalOpen = ref(false)
 const editingContentItem = ref<Content | null>(null)
 
-//para identificar que tipo de modal es
+//editingContentItem en null = modo creacion, el form arranca vacio
 function openCreateContentModal() {
   editingContentItem.value = null
   isContentModalOpen.value = true
 }
 
+//editingContentItem con datos = modo edicion, el form se precarga (por el watch dentro de FormModal)
 function openEditContentModal(item: Content) {
   editingContentItem.value = item
   isContentModalOpen.value = true
@@ -59,12 +67,14 @@ function handleSaveContent(data: Omit<Content, 'id' | 'createdAt'>) {
   isContentModalOpen.value = false
 }
 
+//guarda que destino se quiere borrar y abre el modal de confirmacion
 function handleDeleteContent(id: number) {
   deleteType.value = 'content'
   contentIdToDelete.value = id
   showConfirmModal.value = true
 }
 
+//Feedback
 const toastMessage = ref('')
 const showToast = ref(false)
 
@@ -76,6 +86,7 @@ function triggerToast(message: string) {
   }, 2500)
 }
 
+//Modal de usuarios
 const isUserModalOpen = ref(false)
 const editingUserItem = ref<User | null>(null)
 
@@ -88,6 +99,7 @@ function openEditUserModal(user: User) {
   editingUserItem.value = user
   isUserModalOpen.value = true
 }
+
 
 function handleSaveUser(data: Omit<User, 'registerDate' | 'likedPostIDs'>) {
   if (editingUserItem.value) {
@@ -110,6 +122,7 @@ function handleDeleteUser(email: string) {
   showConfirmModal.value = true
 }
 
+//se ejecuta solo si el usuario confirma en el ConfirmModal
 function confirmDelete() {
   if (deleteType.value === 'content' && contentIdToDelete.value !== null) {
     contentStore.deleteContent(contentIdToDelete.value)
@@ -128,6 +141,7 @@ function cancelDelete() {
   resetConfirmModal()
 }
 
+//limpia todo el estado del modal de confirmacion, para la proxima vez que se use
 function resetConfirmModal() {
   showConfirmModal.value = false
   deleteType.value = null

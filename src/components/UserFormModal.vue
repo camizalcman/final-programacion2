@@ -10,6 +10,8 @@ interface Props {
 
 const props = defineProps<Props>()
 
+//emit hacia AdminView.
+// emit de save excluye registerDate y likedPostIDs porque esos campos no se completan en el form
 const emit = defineEmits<{
   close: []
   save: [data: Omit<User, 'registerDate' | 'likedPostIDs'>]
@@ -23,6 +25,8 @@ const form = ref({
   isAdmin: false,
 })
 
+//si editingItem tiene datos precarga el form (modo edicion), sin datos lo resetea (modo creacion)
+//immediate:true para que corra tambien al montar el componente, no solo ante cambios posteriores
 watch(
   () => props.editingItem,
   (item) => {
