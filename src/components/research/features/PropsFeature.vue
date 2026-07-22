@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import UserCard from './UserCard.vue'
 
-const nombre = ref('...')
+const nombre = ref('')
 const edad = ref(0)
 </script>
 
@@ -14,24 +14,19 @@ const edad = ref(0)
 
     <p class="text-white/80 leading-relaxed mb-4">
       Las <strong>props</strong> permiten que un componente padre envíe datos a un componente hijo.
-      Es la forma principal de comunicación entre componentes en Vue.
+      Es la forma principal de comunicación entre componentes.
     </p>
 
     <div class="bg-accent/60 rounded-xl border border-primary p-4 mb-6">
       <ul class="space-y-2 text-white/80">
         <li>
           <strong class="text-primary">Props</strong>
-          → Envían datos del padre al hijo.
-        </li>
-
-        <li>
-          <strong class="text-primary">Unidireccional</strong>
-          → El hijo recibe la información, pero no debe modificarla.
+          Envían datos del padre al hijo.
         </li>
 
         <li>
           <strong class="text-primary">Emit</strong>
-          → Permite que el hijo envíe eventos al padre.
+          Permite que el hijo envíe eventos al padre.
         </li>
       </ul>
     </div>

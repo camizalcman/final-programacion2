@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
 
 const nombre = ref('')
@@ -19,15 +20,15 @@ const nombre = ref('')
 
       <ul class="space-y-2 text-white/80">
         <li>
-          <strong class="text-primary">ref( )</strong>
-          → Para un valor individual (número, texto o booleano). En el
+          <strong class="text-primary">ref( ) </strong>
+          Para un valor individual (número, texto o booleano). En el
           <strong>script</strong> se accede mediante
           <code class="text-primary">.value</code>.
         </li>
 
         <li>
           <strong class="text-primary">reactive( )</strong>
-          → Para que un objeto completo sea reactivo.
+          Para que un objeto completo sea reactivo.
           Sus propiedades pueden accederse directamente.
         </li>
       </ul>
@@ -46,10 +47,6 @@ const nombre = ref('')
       </p>
 
         <div>
-          <label class="block text-white/70 mb-2">
-            Nombre
-          </label>
-
           <input
             v-model="nombre"
             type="text"

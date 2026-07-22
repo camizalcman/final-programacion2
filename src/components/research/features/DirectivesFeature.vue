@@ -13,29 +13,29 @@ const visible = ref(true)
     <p class="text-white/80 leading-relaxed mb-4">
       Son atributos especiales que comienzan con
       <code class="text-primary">v-</code> y permiten agregar comportamiento al HTML.
-      Algunas de las más utilizadas son:
+      Algunas son:
     </p>
 
     <div class="bg-accent/60 rounded-xl border border-primary p-4 mb-6">
       <ul class="space-y-2 text-white/80">
         <li>
           <strong class="text-primary">v-if</strong>
-          → Muestra u oculta un elemento según una condición.
+          Muestra u oculta un elemento según una condición.
         </li>
 
         <li>
           <strong class="text-primary">v-for</strong>
-          → Recorre un arreglo y genera elementos automáticamente.
+          Recorre un array y genera elementos automáticamente.
         </li>
 
         <li>
           <strong class="text-primary">v-model</strong>
-          → Sincroniza un dato con un input.
+          Sincroniza un dato con un input.
         </li>
 
         <li>
           <strong class="text-primary">v-bind ( : )</strong>
-          → Permite enlazar atributos dinámicamente.
+          Permite enlazar atributos de forma dinámica.
         </li>
       </ul>
     </div>
@@ -60,7 +60,7 @@ const visible = ref(true)
         v-if="visible"
         class="rounded-lg bg-white/10 border border-white/20 p-4 text-white"
       >
-        ¡Este elemento existe gracias a <strong>v-if</strong>!
+        ¡Este elemento existe!
       </div>
     </div>
   </div>

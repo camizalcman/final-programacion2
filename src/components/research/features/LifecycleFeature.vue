@@ -24,8 +24,8 @@ onUnmounted(() => {
     </h3>
 
     <p class="text-white/80 leading-relaxed mb-4">
-      Son funciones que permiten ejecutar código en momentos
-      específicos del ciclo de vida de un componente Vue, como cuando se crea,
+      Funciones que permiten ejecutar código en momentos
+      específicos del ciclo de vida de un componente, como cuando se crea,
       se actualiza o se elimina.
     </p>
 
@@ -33,23 +33,19 @@ onUnmounted(() => {
       <ul class="space-y-2 text-white/80">
         <li>
           <strong class="text-primary">onMounted()</strong>
-          → Se ejecuta cuando el componente ya fue cargado en la página.
+          Se ejecuta cuando el componente ya fue cargado en la página.
         </li>
 
         <li>
           <strong class="text-primary">onUpdated()</strong>
-          → Se ejecuta cada vez que cambia el estado del componente.
+          Se ejecuta cada vez que cambia el estado del componente.
         </li>
 
         <li>
           <strong class="text-primary">onUnmounted()</strong>
-          → Se ejecuta cuando el componente se elimina.
+          Se ejecuta cuando el componente se elimina.
         </li>
 
-        <li>
-          <strong class="text-primary">Utilidad</strong>
-          → Sirven para cargar datos, iniciar eventos o limpiar recursos.
-        </li>
       </ul>
     </div>
 
@@ -59,9 +55,7 @@ onUnmounted(() => {
       </h4>
 
       <p class="text-white/70 mb-6">
-        Cuando el componente aparece, <code class="text-primary">onMounted()</code>
-        cambia automáticamente el mensaje. Cada actualización dispara
-        <code class="text-primary">onUpdated()</code>.
+        El hook <code class="text-primary">onMounted()</code> se ejecuta una sola vez cuando el componente ya está listo. En cambio, <code class="text-primary">onUpdated()</code> se ejecuta cada vez que se actualiza el componente.
       </p>
 
       <button

@@ -25,7 +25,7 @@ const total = computed(() => {
 
     <p class="text-white/80 leading-relaxed mb-4">
       Son valores que se calculan a partir de otros
-      datos reactivos. Vue guarda el resultado y solo lo vuelve a calcular cuando
+      datos reactivos. Se guarda el resultado y solo lo vuelve a calcular cuando
       sus dependencias cambian.
     </p>
 
@@ -33,23 +33,9 @@ const total = computed(() => {
       <ul class="space-y-2 text-white/80">
         <li>
           <strong class="text-primary">computed()</strong>
-          → Crea un valor derivado de otros datos reactivos.
+          Crea un valor derivado de otros datos reactivos.
         </li>
 
-        <li>
-          <strong class="text-primary">Optimización</strong>
-          → Guarda el resultado hasta que cambian sus dependencias.
-        </li>
-
-        <li>
-          <strong class="text-primary">Automático</strong>
-          → Se actualiza cuando los datos usados dentro cambian.
-        </li>
-
-        <li>
-          <strong class="text-primary">Solo lectura</strong>
-          → Normalmente se utiliza para mostrar información calculada.
-        </li>
       </ul>
     </div>
 
@@ -59,7 +45,7 @@ const total = computed(() => {
       </h4>
 
       <p class="text-white/70 mb-6">
-        En este ejemplo, <code class="text-primary">computed</code> calcula un
+        <code class="text-primary">computed</code> calcula un
         mensaje y un precio total usando otros valores reactivos.
       </p>
 
