@@ -31,7 +31,7 @@ function handleLogin() {
       <!-- Foto -->
       <div class="w-full md:w-1/2 md:h-full h-[35%]">
         <img
-          src="/images/fotoLogin.jpg"
+          src="/images/fotoLogin.webp"
           alt="Login"
           class="w-full h-full object-cover"
         />
