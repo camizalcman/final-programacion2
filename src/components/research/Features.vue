@@ -75,7 +75,7 @@ const activeFeature = computed(() =>
             v-for="feature in features"
             :key="feature.id"
             @click="activeId = feature.id"
-            class="flex items-center text-left gap-3 w-[100%] px-4 py-4 md:py-8 rounded-xl cursor-pointer transition-all"
+            class="flex items-center text-left gap-3 w-full px-4 py-4 md:py-8 rounded-xl cursor-pointer transition-all"
             :class="
               activeId === feature.id
                 ? 'bg-primary text-accent'

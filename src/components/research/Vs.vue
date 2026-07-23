@@ -35,13 +35,11 @@
             count: 0
             }
         },
-
         methods: {
             increment() {
             this.count++
             }
-        }
-        }
+        } }
         &lt;/script&gt;</pre>
             </div>
         </div>
@@ -71,7 +69,7 @@
         const count = ref(0)
 
         function increment() {
-        count.value++
+            count.value++
         }
         &lt;/script&gt;</pre>
             </div>

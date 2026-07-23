@@ -8,6 +8,7 @@ const visible = ref(false)
 onMounted(() => {
   if (!container.value) return
 
+  //IntersectionObserver es una API nativa del navegador que permite detectar cuando un elemento entra o sale del viewport
   const observer = new IntersectionObserver(
     (entries) => {
       const entry = entries[0]
