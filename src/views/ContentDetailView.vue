@@ -14,6 +14,7 @@ const destination = computed(() =>
   contentStore.items.find((item) => item.id === Number(route.params.id))
 )
 
+//solo si contentStore.items esta vacía, hace fetch. Si no está vacia es porque ya tiene los datos
 onMounted(() => {
   if (contentStore.items.length === 0) {
     contentStore.fetchContent()
